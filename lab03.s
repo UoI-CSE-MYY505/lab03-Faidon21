@@ -46,11 +46,11 @@ image565:
 #     to the size of the image888 (6, 19 in this example)
 # - This will enable the LED matrix
 # - Uncomment the following and you should see the image on the LED matrix!
-#    la   a0, image888
-#    li   a1, LED_MATRIX_0_BASE
-#    li   a2, LED_MATRIX_0_WIDTH
-#    li   a3, LED_MATRIX_0_HEIGHT
-#    jal  ra, showImage
+    la   a0, image888
+    li   a1, LED_MATRIX_0_BASE
+    li   a2, LED_MATRIX_0_WIDTH
+   li   a3, LED_MATRIX_0_HEIGHT
+    jal  ra, showImage
 # ----- This is where the fun part ends!
 
     la   a0, image888
@@ -99,7 +99,7 @@ outShowRowLoop:
 
 rgb888_to_rgb565:
 # ----------------------------------------
-# Write your code here.
+add t0 , s0 , zero
 # You may move the "return" instruction (jalr zero, ra, 0).
     jalr zero, ra, 0
 
